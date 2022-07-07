@@ -31,6 +31,4 @@ app.use(express.urlencoded({extended:false}))
 app.use("/api/employees", require('./routes/employees.routes'))
 // quiere decir que cada vez que pida /api/employees voy a estar requiriendo toda esa ruta
 
-
-
 module.exports = app;

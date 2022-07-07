@@ -15,13 +15,48 @@ Content-Type: application/json
 ###
 GET http://localhost:3000/api/employees/62c6353f98a814949e9eabea
 
+//GET bad ID
+
+###
+GET http://localhost:3000/api/employees/
+
 ###
 DELETE http://localhost:3000/api/employees/62c6353f98a814949e9eabea
 
 ###
-PUT http://localhost:3000/api/employees/62c6353f98a814949e9eabea
+PUT http://localhost:3000/api/employees/62c7031ebadbf3d3f63dc00d
 Content-Type: application/json
 
 {
     "salary": 16000
+}
+
+###
+POST http://localhost:3000/api/employees
+Content-Type: application/json
+
+{
+    "name": "Luch",
+    "position": "Manager",
+    "office": "La Pampa"
+}
+
+//MALA ID
+###
+PUT http://localhost:3000/api/employees/1
+Content-Type: application/json
+
+{
+    "name": "Luch",
+    "position": "Manager",
+    "office": "La Pampa",
+    "salary": 16000
+}
+
+//sin datos
+###
+PUT http://localhost:3000/api/employees/62c7031ebadbf3d3f63dc00d
+Content-Type: application/json
+
+{
 }
